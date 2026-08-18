@@ -74,9 +74,9 @@
     .quote { font-size:clamp(1.25rem,2.8vw,1.65rem); line-height:1.65; font-weight:800; margin:14px 0 8px; color:#222b42; }
     .quote-en { font-family:Georgia,serif; font-style:italic; font-size:1.12rem; }
     .tag { display:inline-block; border-radius:99px; padding:5px 9px; font-size:.84rem; font-weight:800; margin:0 5px 7px 0; }
-    .tag.review { background:#ffe4a4; color:#6a4300; }.tag.verified { background:#d7f4e3; color:#15583a; }.tag.campus { background:#e3ecff; color:#244c83; }
+    .tag.verified { background:#d7f4e3; color:#15583a; }.tag.campus { background:#e3ecff; color:#244c83; }
     .guide-text { margin:13px 0 15px; padding:13px 15px; border:2px solid #8e79ba; border-radius:9px; background:#f5efff; }
-    .guide-text strong { display:block; margin-bottom:5px; color:#553a87; }.guide-text p { margin:0; line-height:1.65; }
+    .guide-text strong { display:block; margin-bottom:5px; color:#553a87; }.guide-text p { margin:0; line-height:1.65; }.guide-text p + p { margin-top:8px; }
     .callout { background:#eaf3fd; border-left:6px solid var(--blue); padding:13px 15px; margin:15px 0; }
     .callout strong { display:block; margin-bottom:5px; }
     .task { border-top:2px dashed var(--line); margin-top:20px; padding-top:18px; }
@@ -146,9 +146,9 @@
 
       <article id="station0" class="station panel" data-title="思考之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-1.jpg" alt="校園內的愛因斯坦引言牌：要學會思考，不要一碰到困難就向別人伸手" /></div><div>
-          <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="0">🔊 播放語音</button>
+          <span class="tag campus">校園引言</span><button class="button voice no-print" data-voice="0">🔊 播放語音</button>
           <h2>STAGE 1｜思考之鑰</h2><div class="quote">「要學會思考，不要一碰到困難就向別人伸手。」</div>
-          <div class="guide-text"><strong>📖 導覽文字</strong><p>牌上的文字提醒我們先思考再求助。不過，獨立思考不是拒絕合作；請先整理你已經試過的辦法，再帶著清楚的問題向別人請教。</p></div>
+          <div class="guide-text"><strong>📖 導覽文字</strong><p><b>愛因斯坦例子：</b>少年時的愛因斯坦曾想像「如果追著一束光跑，會看到什麼？」這種先在腦中預演的思想實驗，幫助他把問題想得更清楚。</p><p><b>校園連結：</b>遇到數學題或閱讀題卡關時，先圈出已知條件、畫圖或寫下試過的方法；再帶著「我卡在哪一步？」去問同學或老師。獨立思考不是不合作，而是先讓自己的問題變清楚。</p></div>
           <div class="callout"><strong>先試，再問。</strong>寫下你試過的方法，帶著問題找夥伴。</div>
           <div class="task"><h3>MISSION｜把「卡關」說清楚</h3><label for="a0">寫一件你最近遇到的學習困難。你已經試過什麼？下一步要問誰、問什麼？</label><textarea id="a0" placeholder="至少 25 字，例如：我先……；我發現……；我想問……"></textarea><p class="notice">成功條件：具體寫出「已嘗試的方法」與「下一個問題」。</p></div>
         </div></div><div class="nav-row no-print"><button class="button secondary return-map">← 回校園地圖</button><button class="button secondary complete" data-i="0">提交任務，取得思考徽章</button></div>
@@ -158,7 +158,7 @@
         <div class="station-grid"><div><img class="photo" src="assets/station-2.jpg" alt="校園內的英文與中文愛因斯坦引言牌：重要的事是永遠不要停止發問" /></div><div>
           <span class="tag verified">有可追溯的出版脈絡</span><button class="button voice no-print" data-voice="1">🔊 播放語音</button>
           <h2>STAGE 2｜提問之鑰</h2><div class="quote quote-en">“The important thing is not to stop questioning.”</div><div class="quote">「重要的事是永遠不要停止發問。」</div>
-          <div class="guide-text"><strong>📖 導覽文字</strong><p>提問不是隨便問，而是把好奇變成可觀察、可比較、可蒐集證據的問題。從校園的一個現象開始，試著設計能用觀察或資料回答的探究問題。</p></div>
+          <div class="guide-text"><strong>📖 導覽文字</strong><p><b>愛因斯坦例子：</b>愛因斯坦回憶，小時候看到羅盤指針會自己轉動，讓他好奇看不見的力量為什麼能影響它；這份好奇成了探究的起點。</p><p><b>校園連結：</b>把「操場積水好討厭」改成「下雨後，操場哪一區的積水消退最慢？」就能觀察地點、記錄時間、比較結果。好問題要能蒐集證據，不只是在問喜不喜歡。</p></div>
           <div class="callout"><strong>好問題可以觀察。</strong>加上地點、時間或比較條件，就能開始蒐證。</div>
           <div class="task"><h3>MISSION｜把好奇改寫成可探究的問題</h3><label for="a1">選擇校園的一個現象，寫出一個可用觀察或資料回答的問題。</label><textarea id="a1" placeholder="例如：下雨後，操場哪一區的積水消退得最慢？為什麼？"></textarea>
             <fieldset class="quiz-block"><legend>提問選擇題</legend><p>下列哪一個問題最適合用校園觀察或資料來回答？</p><div class="choices" id="a1quiz">
@@ -172,9 +172,9 @@
 
       <article id="station2" class="station panel" data-title="堅持之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-3.jpg" alt="校園內的愛因斯坦引言牌：並不是我很聰明，而祇是我和問題相處得比較久一點" /></div><div>
-          <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="2">🔊 播放語音</button>
+          <span class="tag campus">校園引言</span><button class="button voice no-print" data-voice="2">🔊 播放語音</button>
           <h2>STAGE 3｜堅持之鑰</h2><div class="quote">「並不是我很聰明，而只是我和問題相處得比較久一點。」</div>
-          <div class="guide-text"><strong>📖 導覽文字</strong><p>科學家不只是做很久，而是記錄、修正、再測試。愛因斯坦發展廣義相對論也花了多年，並與其他學者合作；堅持也需要根據證據調整方法。</p></div>
+          <div class="guide-text"><strong>📖 導覽文字</strong><p><b>愛因斯坦例子：</b>愛因斯坦花了多年研究重力與相對論，最後在 1915 年完成廣義相對論的重要理論；這不是一直重複同一件事，而是在計算、討論與修正中慢慢前進。</p><p><b>校園連結：</b>紙飛機飛不遠時，不要只說「我不會」。記下折法、飛行距離和風向，一次只改一個地方再試；你的紀錄會告訴你下一次怎麼改。</p></div>
           <div class="callout"><strong>TRY AGAIN！</strong>記錄、改一個條件、再測試。</div>
           <div class="task"><h3>MISSION｜選出探究者的下一步</h3><p>你測試紙飛機，三次都飛不遠。下一步最合適的是？</p><div class="choices" id="a2"><label class="choice"><input type="radio" name="persistence" value="a">直接說自己沒有天分，放棄測試。</label><label class="choice"><input type="radio" name="persistence" value="b">每次都用同一種折法，卻不記錄結果。</label><label class="choice"><input type="radio" name="persistence" value="c">記錄每次的折法與飛行距離，一次只改變一個條件後再測試。</label><label class="choice"><input type="radio" name="persistence" value="d">請同學做好一架，自己只看答案。</label></div><p class="notice">成功條件：選擇最能讓證據累積的方法。</p></div>
         </div></div><div class="nav-row no-print"><button class="button secondary return-map">← 回校園地圖</button><button class="button secondary complete" data-i="2">提交任務，取得堅持徽章</button></div>
@@ -182,9 +182,9 @@
 
       <article id="station3" class="station panel" data-title="人格之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-4.jpg" alt="校園內的愛因斯坦引言牌：教師的人格就是教育工作者的一切，只有健康的心靈才有健康的行為" /></div><div>
-          <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="3">🔊 播放語音</button>
+          <span class="tag campus">校園引言</span><button class="button voice no-print" data-voice="3">🔊 播放語音</button>
           <h2>FINAL STAGE｜人格之鑰</h2><div class="quote">「教師的人格就是教育工作者的一切，只有健康的心靈才有健康的行為。」</div>
-          <div class="guide-text"><strong>📖 導覽文字</strong><p>語錄把健康的心靈和健康的行為連在一起，提醒我們人格不只是心裡的想法，也會表現在對自己與他人的態度。覺察、尊重與負責，都是可以實際做出來的行動。</p></div>
+          <div class="guide-text"><strong>📖 導覽文字</strong><p><b>愛因斯坦例子：</b>愛因斯坦曾公開批評把平等與人的尊嚴只限於特定族群的偏見；這提醒我們，知識和能力也要用在尊重每一個人。</p><p><b>校園連結：</b>小組討論時，就算不同意，也可以先聽完理由、用不傷人的話回應；自己做錯時願意承認並修正。健康的心靈會變成看得見的尊重與負責。</p></div>
           <div class="callout"><strong>人格會變成行動。</strong>先照顧自己的心，再用尊重與負責任的方式對待別人。</div>
           <div class="task"><h3>FINAL MISSION｜人格選擇題 × 2</h3>
             <fieldset class="quiz-block"><legend>第 1 題／理解</legend><p>哪一個行動最符合「健康的心靈才有健康的行為」？</p><div class="choices" id="a3q1">
@@ -212,24 +212,23 @@
   <script src="backend-config.js"></script>
   <script>
     const stations = [
-      {title:'思考之鑰', badge:'🧠', voice:'歡迎來到第一站，思考之鑰。牌上的文字提醒我們先思考再求助。不過，獨立思考不是拒絕合作；請先整理你已經試過的辦法，再帶著清楚的問題向別人請教。'},
-      {title:'提問之鑰', badge:'🔍', voice:'第二站，提問之鑰。提問不是隨便問，而是把好奇變成可觀察、可比較、可蒐集證據的問題。現在請從校園的一個現象開始，設計你的探究問題。'},
-      {title:'堅持之鑰', badge:'🧪', voice:'第三站，堅持之鑰。科學家不只是做很久，而是記錄、修正、再測試。愛因斯坦發展廣義相對論也花了多年，並與其他學者合作。請選出最能累積證據的做法。'},
-      {title:'人格之鑰', badge:'🤝', voice:'最後一站，人格之鑰。語錄把健康的心靈和健康的行為連在一起，提醒我們人格不只是心裡的想法，也會表現在對自己與他人的態度。請完成兩題選擇題，判斷哪些行動最能展現覺察、尊重與負責。'}
+      {title:'思考之鑰', badge:'🧠', voice:'思考之鑰。少年時的愛因斯坦曾想像，如果追著一束光跑，會看到什麼？這種在腦中預演的思想實驗，能幫助我們把問題想清楚。遇到數學題卡關時，先圈出已知、畫圖、寫下試過的方法，再帶著清楚問題去問人。'},
+      {title:'提問之鑰', badge:'🔍', voice:'提問之鑰。愛因斯坦回憶，小時候看到羅盤指針會自己轉動，讓他想找出看不見的力量。校園裡也能這樣提問：不要只說操場積水好討厭，而要問下雨後哪一區的積水消退最慢。好問題要能觀察、比較並留下證據。'},
+      {title:'堅持之鑰', badge:'🧪', voice:'堅持之鑰。愛因斯坦花了多年研究重力與相對論，最後在一九一五年完成廣義相對論的重要理論。他不是一直重複，而是在計算、討論與修正中前進。測試紙飛機也一樣：記錄折法與距離，一次只改一個地方再試。'},
+      {title:'人格之鑰', badge:'🤝', voice:'人格之鑰。愛因斯坦曾公開批評只把平等與人的尊嚴留給特定族群的偏見。這提醒我們，知識和能力也要用來尊重每一個人。小組討論時先聽完理由、用不傷人的話回應，做錯時願意承認並修正。'}
     ];
-    const state = {name:'', unlocked:0, completed:[false,false,false,false], answers:['','','',''], askQuiz:'', lastQuiz:['',''], feeling:'', reflection:'', submittedAt:''};
+    const state = {name:'', unlocked:3, completed:[false,false,false,false], answers:['','','',''], askQuiz:'', lastQuiz:['',''], feeling:'', reflection:'', submittedAt:''};
     const backend = window.EINSTEIN_BACKEND || { scriptUrl:'' };
     const $ = s => document.querySelector(s);
     const portals = [{x:50,y:25},{x:77,y:51},{x:50,y:75},{x:23,y:51}];
     const player = {x:50,y:51};
     const save = () => localStorage.setItem('einstein-treasure-v1', JSON.stringify(state));
-    const load = () => { try { Object.assign(state, JSON.parse(localStorage.getItem('einstein-treasure-v1')) || {}); if(!Array.isArray(state.lastQuiz)) state.lastQuiz=['','']; if(state.completed[1] && state.askQuiz!=='b'){ state.completed[1]=false; state.unlocked=Math.min(state.unlocked,1); } if(state.completed[3] && state.lastQuiz.join('|')!=='b|c'){ state.completed[3]=false; state.unlocked=Math.min(state.unlocked,3); } } catch(e){} };
+    const load = () => { try { Object.assign(state, JSON.parse(localStorage.getItem('einstein-treasure-v1')) || {}); if(!Array.isArray(state.lastQuiz)) state.lastQuiz=['','']; if(state.completed[1] && state.askQuiz!=='b') state.completed[1]=false; if(state.completed[3] && state.lastQuiz.join('|')!=='b|c') state.completed[3]=false; state.unlocked=3; } catch(e){} };
     function speak(i){
       if(!('speechSynthesis' in window)){ alert('此瀏覽器不支援語音導覽，請改用 Chrome、Edge 或 Safari。'); return; }
       speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(stations[i].voice); u.lang='zh-TW'; u.rate=.9; speechSynthesis.speak(u);
     }
     function showStation(i){
-      if(i > state.unlocked) return;
       $('#worldMap').style.display='none';
       document.querySelectorAll('.station').forEach(x=>x.classList.remove('show'));
       $('#station'+i).classList.add('show'); $('#results').style.display='none'; updateMap(); window.scrollTo({top:0,behavior:'smooth'});
@@ -240,16 +239,16 @@
       window.scrollTo({top:0,behavior:'smooth'}); setTimeout(()=>$('#campusMap').focus({preventScroll:true}),350);
     }
     function updateMap(){
-      document.querySelectorAll('.map-item').forEach((b,i)=>{ b.dataset.state=state.completed[i]?'done':(i>state.unlocked?'locked':'ready'); b.disabled=i>state.unlocked; });
+      document.querySelectorAll('.map-item').forEach((b,i)=>{ b.dataset.state=state.completed[i]?'done':'ready'; b.disabled=false; });
       $('#progressBar').style.width=(state.completed.filter(Boolean).length/4*100)+'%';
       const next=state.completed.findIndex(done=>!done);
-      $('#mapHint').textContent=next<0?'QUEST CLEAR！四把鑰匙已集滿，前往成果報告。':'NEXT QUEST：前往'+['北・思考','東・提問','南・堅持','西・人格'][next]+'傳送門。';
+      $('#mapHint').textContent=next<0?'QUEST CLEAR！四把鑰匙已集滿，前往成果報告。':'FREE SELECT：選擇任一傳送門開始，完成四關即可解鎖成果報告。';
     }
     function setPlayerPosition(){ $('#player').style.left=player.x+'%'; $('#player').style.top=player.y+'%'; }
     function enterNearbyPortal(){
       for(let i=0;i<portals.length;i++){
         const distance=Math.hypot(player.x-portals[i].x,player.y-portals[i].y);
-        if(distance<7 && i<=state.unlocked){ showStation(i); return true; }
+        if(distance<7){ showStation(i); return true; }
       }
       return false;
     }
@@ -276,8 +275,8 @@
     }
     function finish(i){
       if(!validate(i)){ feedback(i===1?'請完成書寫並再想想：哪一個問題包含可觀察的地點、現象與比較條件？':i===2?'再想一想：哪一種做法能留下可比較的資料，並且一次只改變一個條件？':i===3?'還差一點！兩題都要答對。想想看：健康的心靈如何變成尊重、負責與以身作則的行動？':'再補充一些具體內容，達到本關的成功條件後再提交。',false); return; }
-      state.completed[i]=true; state.unlocked=Math.max(state.unlocked,Math.min(3,i+1)); save();
-      if(state.completed.every(Boolean)) showResults(); else { feedback('完成！你取得 '+stations[i].title+'。下一站已在校園地圖解鎖。'); player.x=50; player.y=51; setTimeout(showMap,650); }
+      state.completed[i]=true; state.unlocked=3; save();
+      if(state.completed.every(Boolean)) showResults(); else { feedback('完成！你取得 '+stations[i].title+'。其餘傳送門都可自由挑戰。'); player.x=50; player.y=51; setTimeout(showMap,650); }
     }
     function esc(v){ return String(v).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
     function showResults(){
