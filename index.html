@@ -91,8 +91,6 @@
     .feedback { min-height:28px; margin:12px 0 0; font-weight:800; }
     .feedback.good { color:var(--green); }.feedback.bad { color:var(--red); }
     .nav-row { display:flex; justify-content:space-between; gap:12px; margin-top:18px; flex-wrap:wrap; }
-    .status-box { background:#17315e; color:white; padding:16px 18px; border-radius:10px; margin:16px 0; }
-    .status-box strong { color:#ffe18a; }
     details { margin-top:16px; border:2px solid var(--line); border-radius:8px; background:#fffefa; padding:10px 13px; }
     summary { cursor:pointer; font-weight:800; }
     .source-list { padding-left:20px; line-height:1.65; }
@@ -114,18 +112,17 @@
   <main class="shell">
     <header>
       <img class="avatar" src="assets/einstein-pixel-guide.png" alt="愛因斯坦像素導覽角色" />
-      <div><p class="eyebrow">PIXEL QUEST · 高年級</p><h1>愛因斯坦 QUEST</h1></div>
+      <div><p class="eyebrow">PIXEL QUEST · 高年級</p><h1>愛因斯坦・四把鑰匙 QUEST</h1></div>
     </header>
 
     <section id="welcome" class="panel">
       <div>
-        <h2>校園尋寶，收集 4 把鑰匙！</h2>
+        <h2>⚡ MISSION START｜收集 4 把鑰匙！</h2>
         <p>觀察、提問、嘗試、合作。<b>完成任務，解鎖證書。</b></p>
         <div class="pixel-box">🎯 QUEST：把校園引言變成你的探究行動。</div>
         <div class="form-row"><label for="studentName" class="hidden">學生代號或小隊名稱</label><input id="studentName" type="text" maxlength="20" placeholder="輸入學生代號／小隊名稱" /><button id="startBtn" class="button">開始 QUEST</button></div>
       </div>
       <div class="welcome-side">
-        <div class="status-box"><strong>REWARD</strong><br>🧠 🔍 🧪 🤝<br>合格證書 PNG</div>
         <div class="qr-card"><img src="assets/quest-qr.png" alt="掃描後開啟愛因斯坦校園尋寶遊戲的 QR Code" /><strong>📱 掃描進入 QUEST</strong><a href="https://laierin615.github.io/einstein-campus-quest/">laierin615.github.io/einstein-campus-quest</a></div>
         <div class="teacher-link"><a class="button secondary" href="https://script.google.com/macros/s/AKfycbwo60QBUromyiZAxJOSLN7vzzXPD9FKYHfH1JSJu50pOjeVLR2Y_ammjnsoXNmht9U1/exec?page=admin" target="_blank" rel="noopener">📊 教師即時後台</a></div>
       </div>
@@ -134,7 +131,7 @@
     <section id="game">
       <div class="no-print"><p id="hello" class="eyebrow"></p><div class="progress" aria-label="完成進度"><div id="progressBar"></div></div></div>
       <section id="worldMap" class="world-map panel no-print" aria-label="像素校園遊戲地圖">
-        <div class="map-topbar"><p>🗺️ 像素校園地圖<small id="mapHint">用方向鍵、WASD 或畫面按鈕移動。</small></p><span class="map-key">MOVE → PORTAL</span></div>
+        <div class="map-topbar"><p>🗺️ WORLD MAP｜像素校園<small id="mapHint">用方向鍵、WASD 或畫面按鈕移動。</small></p><span class="map-key">MOVE → PORTAL</span></div>
         <div id="campusMap" class="campus-map" tabindex="0" aria-label="校園地圖，移動小愛因斯坦前往關卡">
           <div class="building north">A 棟・北側教室</div><div class="building east">B 棟・東側教室</div><div class="building south">C 棟・南側教室</div><div class="building west">D 棟・西側教室</div>
           <div class="stairs n"></div><div class="stairs e"></div><div class="stairs s"></div><div class="stairs w"></div>
@@ -150,20 +147,20 @@
       <article id="station0" class="station panel" data-title="思考之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-1.jpg" alt="校園內的愛因斯坦引言牌：要學會思考，不要一碰到困難就向別人伸手" /></div><div>
           <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="0">🔊 播放語音</button>
-          <h2>第一站：思考之鑰</h2><div class="quote">「要學會思考，不要一碰到困難就向別人伸手。」</div>
+          <h2>STAGE 1｜思考之鑰</h2><div class="quote">「要學會思考，不要一碰到困難就向別人伸手。」</div>
           <div class="guide-text"><strong>📖 導覽文字</strong><p>牌上的文字提醒我們先思考再求助。不過，獨立思考不是拒絕合作；請先整理你已經試過的辦法，再帶著清楚的問題向別人請教。</p></div>
           <div class="callout"><strong>先試，再問。</strong>寫下你試過的方法，帶著問題找夥伴。</div>
-          <div class="task"><h3>任務：把「卡關」說清楚</h3><label for="a0">寫一件你最近遇到的學習困難。你已經試過什麼？下一步要問誰、問什麼？</label><textarea id="a0" placeholder="至少 25 字，例如：我先……；我發現……；我想問……"></textarea><p class="notice">成功條件：具體寫出「已嘗試的方法」與「下一個問題」。</p></div>
+          <div class="task"><h3>MISSION｜把「卡關」說清楚</h3><label for="a0">寫一件你最近遇到的學習困難。你已經試過什麼？下一步要問誰、問什麼？</label><textarea id="a0" placeholder="至少 25 字，例如：我先……；我發現……；我想問……"></textarea><p class="notice">成功條件：具體寫出「已嘗試的方法」與「下一個問題」。</p></div>
         </div></div><div class="nav-row no-print"><button class="button secondary return-map">← 回校園地圖</button><button class="button secondary complete" data-i="0">提交任務，取得思考徽章</button></div>
       </article>
 
       <article id="station1" class="station panel" data-title="提問之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-2.jpg" alt="校園內的英文與中文愛因斯坦引言牌：重要的事是永遠不要停止發問" /></div><div>
           <span class="tag verified">有可追溯的出版脈絡</span><button class="button voice no-print" data-voice="1">🔊 播放語音</button>
-          <h2>第二站：提問之鑰</h2><div class="quote quote-en">“The important thing is not to stop questioning.”</div><div class="quote">「重要的事是永遠不要停止發問。」</div>
+          <h2>STAGE 2｜提問之鑰</h2><div class="quote quote-en">“The important thing is not to stop questioning.”</div><div class="quote">「重要的事是永遠不要停止發問。」</div>
           <div class="guide-text"><strong>📖 導覽文字</strong><p>提問不是隨便問，而是把好奇變成可觀察、可比較、可蒐集證據的問題。從校園的一個現象開始，試著設計能用觀察或資料回答的探究問題。</p></div>
           <div class="callout"><strong>好問題可以觀察。</strong>加上地點、時間或比較條件，就能開始蒐證。</div>
-          <div class="task"><h3>任務：把好奇改寫成可探究的問題</h3><label for="a1">選擇校園的一個現象，寫出一個可用觀察或資料回答的問題。</label><textarea id="a1" placeholder="例如：下雨後，操場哪一區的積水消退得最慢？為什麼？"></textarea>
+          <div class="task"><h3>MISSION｜把好奇改寫成可探究的問題</h3><label for="a1">選擇校園的一個現象，寫出一個可用觀察或資料回答的問題。</label><textarea id="a1" placeholder="例如：下雨後，操場哪一區的積水消退得最慢？為什麼？"></textarea>
             <fieldset class="quiz-block"><legend>提問選擇題</legend><p>下列哪一個問題最適合用校園觀察或資料來回答？</p><div class="choices" id="a1quiz">
               <label class="choice"><input type="radio" name="askQuestion" value="a">學校哪一個地方最漂亮？</label>
               <label class="choice"><input type="radio" name="askQuestion" value="b">下雨後，操場哪一區的積水消退得最慢？</label>
@@ -176,20 +173,20 @@
       <article id="station2" class="station panel" data-title="堅持之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-3.jpg" alt="校園內的愛因斯坦引言牌：並不是我很聰明，而祇是我和問題相處得比較久一點" /></div><div>
           <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="2">🔊 播放語音</button>
-          <h2>第三站：堅持之鑰</h2><div class="quote">「並不是我很聰明，而只是我和問題相處得比較久一點。」</div>
+          <h2>STAGE 3｜堅持之鑰</h2><div class="quote">「並不是我很聰明，而只是我和問題相處得比較久一點。」</div>
           <div class="guide-text"><strong>📖 導覽文字</strong><p>科學家不只是做很久，而是記錄、修正、再測試。愛因斯坦發展廣義相對論也花了多年，並與其他學者合作；堅持也需要根據證據調整方法。</p></div>
           <div class="callout"><strong>TRY AGAIN！</strong>記錄、改一個條件、再測試。</div>
-          <div class="task"><h3>任務：選出較像探究者的下一步</h3><p>你測試紙飛機，三次都飛不遠。下一步最合適的是？</p><div class="choices" id="a2"><label class="choice"><input type="radio" name="persistence" value="a">直接說自己沒有天分，放棄測試。</label><label class="choice"><input type="radio" name="persistence" value="b">每次都用同一種折法，卻不記錄結果。</label><label class="choice"><input type="radio" name="persistence" value="c">記錄每次的折法與飛行距離，一次只改變一個條件後再測試。</label><label class="choice"><input type="radio" name="persistence" value="d">請同學做好一架，自己只看答案。</label></div><p class="notice">成功條件：選擇最能讓證據累積的方法。</p></div>
+          <div class="task"><h3>MISSION｜選出探究者的下一步</h3><p>你測試紙飛機，三次都飛不遠。下一步最合適的是？</p><div class="choices" id="a2"><label class="choice"><input type="radio" name="persistence" value="a">直接說自己沒有天分，放棄測試。</label><label class="choice"><input type="radio" name="persistence" value="b">每次都用同一種折法，卻不記錄結果。</label><label class="choice"><input type="radio" name="persistence" value="c">記錄每次的折法與飛行距離，一次只改變一個條件後再測試。</label><label class="choice"><input type="radio" name="persistence" value="d">請同學做好一架，自己只看答案。</label></div><p class="notice">成功條件：選擇最能讓證據累積的方法。</p></div>
         </div></div><div class="nav-row no-print"><button class="button secondary return-map">← 回校園地圖</button><button class="button secondary complete" data-i="2">提交任務，取得堅持徽章</button></div>
       </article>
 
       <article id="station3" class="station panel" data-title="人格之鑰">
         <div class="station-grid"><div><img class="photo" src="assets/station-4.jpg" alt="校園內的愛因斯坦引言牌：教師的人格就是教育工作者的一切，只有健康的心靈才有健康的行為" /></div><div>
           <span class="tag campus">校園引言</span><span class="tag review">未找到可驗證的一手出處</span><button class="button voice no-print" data-voice="3">🔊 播放語音</button>
-          <h2>第四站：人格之鑰</h2><div class="quote">「教師的人格就是教育工作者的一切，只有健康的心靈才有健康的行為。」</div>
+          <h2>FINAL STAGE｜人格之鑰</h2><div class="quote">「教師的人格就是教育工作者的一切，只有健康的心靈才有健康的行為。」</div>
           <div class="guide-text"><strong>📖 導覽文字</strong><p>語錄把健康的心靈和健康的行為連在一起，提醒我們人格不只是心裡的想法，也會表現在對自己與他人的態度。覺察、尊重與負責，都是可以實際做出來的行動。</p></div>
           <div class="callout"><strong>人格會變成行動。</strong>先照顧自己的心，再用尊重與負責任的方式對待別人。</div>
-          <div class="task"><h3>任務：人格選擇題 × 2</h3>
+          <div class="task"><h3>FINAL MISSION｜人格選擇題 × 2</h3>
             <fieldset class="quiz-block"><legend>第 1 題／理解</legend><p>哪一個行動最符合「健康的心靈才有健康的行為」？</p><div class="choices" id="a3q1">
               <label class="choice"><input type="radio" name="characterMind" value="a">心情不好時，把怒氣發洩在同學身上。</label>
               <label class="choice"><input type="radio" name="characterMind" value="b">先覺察自己的情緒，冷靜後再尊重地說出需求。</label>
@@ -206,8 +203,8 @@
       </article>
 
       <section id="results" class="panel">
-        <h2>🏆 QUEST CLEAR！</h2><p id="scoreText"></p><div id="resultGrid" class="result-grid"></div>
-        <section class="task" aria-labelledby="feelTitle"><h3 id="feelTitle">最後一張學習卡：說出你的感受與下一步</h3><p>學會探究，不代表立刻有答案。選一個最接近你現在的感受，再寫下你願意帶走的行動。</p><div class="feelings" role="group" aria-label="我的學習感受"><button class="feeling" data-feeling="好奇，想繼續問下去" aria-pressed="false">🤔 好奇</button><button class="feeling" data-feeling="卡關，但知道可以怎麼再試" aria-pressed="false">🧩 卡關也能前進</button><button class="feeling" data-feeling="有信心提出自己的想法" aria-pressed="false">💡 有信心</button><button class="feeling" data-feeling="想和同學一起研究" aria-pressed="false">🤝 想合作</button></div><label for="reflection">我今天想帶走的一個提問或行動是：</label><textarea id="reflection" placeholder="例如：下次遇到不懂的題目，我會先寫下已知條件與我的猜想，再帶著問題請同學討論。"></textarea><p id="reflectionFeedback" class="feedback"></p></section>
+        <h2>🏆 QUEST CLEAR｜四把鑰匙全收集！</h2><p id="scoreText"></p><div id="resultGrid" class="result-grid"></div>
+        <section class="task" aria-labelledby="feelTitle"><h3 id="feelTitle">BONUS MISSION｜帶走你的下一步</h3><p>學會探究，不代表立刻有答案。選一個最接近你現在的感受，再寫下你願意帶走的行動。</p><div class="feelings" role="group" aria-label="我的學習感受"><button class="feeling" data-feeling="好奇，想繼續問下去" aria-pressed="false">🤔 好奇</button><button class="feeling" data-feeling="卡關，但知道可以怎麼再試" aria-pressed="false">🧩 卡關也能前進</button><button class="feeling" data-feeling="有信心提出自己的想法" aria-pressed="false">💡 有信心</button><button class="feeling" data-feeling="想和同學一起研究" aria-pressed="false">🤝 想合作</button></div><label for="reflection">我今天想帶走的一個提問或行動是：</label><textarea id="reflection" placeholder="例如：下次遇到不懂的題目，我會先寫下已知條件與我的猜想，再帶著問題請同學討論。"></textarea><p id="reflectionFeedback" class="feedback"></p></section>
         <div class="nav-row no-print"><button id="submitBtn" class="button">交卷送出</button><button id="certificateBtn" class="button secondary" disabled title="交卷送出後才能下載">交卷後解鎖證書</button><a id="teacherDashboardBtn" class="button secondary hidden" href="https://script.google.com/macros/s/AKfycbwo60QBUromyiZAxJOSLN7vzzXPD9FKYHfH1JSJu50pOjeVLR2Y_ammjnsoXNmht9U1/exec?page=admin" target="_blank" rel="noopener">📊 教師即時後台</a><button id="resetBtn" class="button secondary">重玩</button></div><p id="syncStatus" class="notice no-print"></p>
       </section>
     </section>
@@ -246,7 +243,7 @@
       document.querySelectorAll('.map-item').forEach((b,i)=>{ b.dataset.state=state.completed[i]?'done':(i>state.unlocked?'locked':'ready'); b.disabled=i>state.unlocked; });
       $('#progressBar').style.width=(state.completed.filter(Boolean).length/4*100)+'%';
       const next=state.completed.findIndex(done=>!done);
-      $('#mapHint').textContent=next<0?'四把鑰匙已集滿！可以前往成果報告。':'下一個目標：'+['北・思考','東・提問','南・堅持','西・人格'][next]+'傳送門。';
+      $('#mapHint').textContent=next<0?'QUEST CLEAR！四把鑰匙已集滿，前往成果報告。':'NEXT QUEST：前往'+['北・思考','東・提問','南・堅持','西・人格'][next]+'傳送門。';
     }
     function setPlayerPosition(){ $('#player').style.left=player.x+'%'; $('#player').style.top=player.y+'%'; }
     function enterNearbyPortal(){
