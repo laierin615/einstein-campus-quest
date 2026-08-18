@@ -208,7 +208,7 @@
       <section id="results" class="panel">
         <h2>🏆 QUEST CLEAR！</h2><p id="scoreText"></p><div id="resultGrid" class="result-grid"></div>
         <section class="task" aria-labelledby="feelTitle"><h3 id="feelTitle">最後一張學習卡：說出你的感受與下一步</h3><p>學會探究，不代表立刻有答案。選一個最接近你現在的感受，再寫下你願意帶走的行動。</p><div class="feelings" role="group" aria-label="我的學習感受"><button class="feeling" data-feeling="好奇，想繼續問下去" aria-pressed="false">🤔 好奇</button><button class="feeling" data-feeling="卡關，但知道可以怎麼再試" aria-pressed="false">🧩 卡關也能前進</button><button class="feeling" data-feeling="有信心提出自己的想法" aria-pressed="false">💡 有信心</button><button class="feeling" data-feeling="想和同學一起研究" aria-pressed="false">🤝 想合作</button></div><label for="reflection">我今天想帶走的一個提問或行動是：</label><textarea id="reflection" placeholder="例如：下次遇到不懂的題目，我會先寫下已知條件與我的猜想，再帶著問題請同學討論。"></textarea><p id="reflectionFeedback" class="feedback"></p></section>
-        <div class="nav-row no-print"><button id="submitBtn" class="button">交卷送出</button><button id="certificateBtn" class="button secondary" disabled title="交卷送出後才能下載">交卷後解鎖證書</button><button id="resetBtn" class="button secondary">重玩</button></div><p id="syncStatus" class="notice no-print"></p>
+        <div class="nav-row no-print"><button id="submitBtn" class="button">交卷送出</button><button id="certificateBtn" class="button secondary" disabled title="交卷送出後才能下載">交卷後解鎖證書</button><a id="teacherDashboardBtn" class="button secondary hidden" href="https://script.google.com/macros/s/AKfycbwo60QBUromyiZAxJOSLN7vzzXPD9FKYHfH1JSJu50pOjeVLR2Y_ammjnsoXNmht9U1/exec?page=admin" target="_blank" rel="noopener">📊 教師即時後台</a><button id="resetBtn" class="button secondary">重玩</button></div><p id="syncStatus" class="notice no-print"></p>
       </section>
     </section>
   </main>
@@ -289,7 +289,7 @@
       $('#resultGrid').innerHTML=stations.map((x,i)=>`<div class="result-card"><b>${x.badge} ${x.title}</b>${i===1?'<p>'+esc(state.answers[i])+'</p><p>選擇題：找出可觀察、可比較的校園問題。</p>':i===2?'<p>我選擇：記錄折法與距離、一次改一個條件再測試。</p>':'<p>'+esc(state.answers[i])+'</p>'}</div>`).join('');
       $('#reflection').value=state.reflection||''; document.querySelectorAll('.feeling').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.feeling===state.feeling))); updateCertificateState(); window.scrollTo({top:0,behavior:'smooth'});
     }
-    function updateCertificateState(){ const locked=!state.submittedAt; $('#certificateBtn').disabled=locked; $('#certificateBtn').textContent=locked?'交卷後解鎖證書':'下載證書 PNG'; $('#certificateBtn').title=locked?'請先交卷送出':'下載合格證書 PNG'; $('#submitBtn').disabled=!locked; $('#submitBtn').textContent=locked?'交卷送出':'已交卷'; }
+    function updateCertificateState(){ const locked=!state.submittedAt; $('#certificateBtn').disabled=locked; $('#certificateBtn').textContent=locked?'交卷後解鎖證書':'下載證書 PNG'; $('#certificateBtn').title=locked?'請先交卷送出':'下載合格證書 PNG'; $('#submitBtn').disabled=!locked; $('#submitBtn').textContent=locked?'交卷送出':'已交卷'; $('#teacherDashboardBtn').classList.toggle('hidden',locked); }
     function wrapText(ctx,text,x,y,maxWidth,lineHeight){ const chars=[...text]; let line=''; let cy=y; for(const char of chars){ const test=line+char; if(ctx.measureText(test).width>maxWidth && line){ ctx.fillText(line,x,cy); cy+=lineHeight; line=char; } else line=test; } if(line) ctx.fillText(line,x,cy); return cy; }
     async function downloadCertificate(){
       if(!state.submittedAt){ $('#syncStatus').textContent='請先交卷送出，確認後才能下載證書。'; $('#syncStatus').className='notice feedback bad'; return; }
