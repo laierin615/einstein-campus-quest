@@ -1,5 +1,5 @@
 // 部署 Google Apps Script 後，將 scriptUrl 改為網頁應用程式網址。
-// 教師密碼請只設定在 Apps Script 的「指令碼屬性」ADMIN_PASSWORD，切勿寫在這裡。
+// 此版本依教師需求使用公開即時作答看板；請勿讓學生提交真實姓名或其他個人資料。
 window.EINSTEIN_BACKEND = {
-  scriptUrl: 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'
+  scriptUrl: 'https://script.google.com/macros/s/AKfycbwo60QBUromyiZAxJOSLN7vzzXPD9FKYHfH1JSJu50pOjeVLR2Y_ammjnsoXNmht9U1/exec'
 };
